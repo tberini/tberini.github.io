@@ -70,7 +70,7 @@ var CONFIG = {
     } 
   },
   "gameover": {
-    "text": "You\nDead",
+    "text": "You\nDead!",
     "offset": -150,
     "style": {
       "font": "100px sans-serif", 

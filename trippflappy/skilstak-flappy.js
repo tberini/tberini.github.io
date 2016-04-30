@@ -96708,8 +96708,8 @@ Flappy.Start.prototype = {
 
   update: function () {
     if (this.config.sign.twoframe) {
-      if (this.sign.deltaY < 0) {
-        this.sign.frame = 0;
+      if (this.sign.deltaY < 20) {
+        this.sign.frame = 20;
       } else {
         this.sign.frame = 2;
       }
@@ -96757,7 +96757,7 @@ Flappy.Play.prototype = {
 
   addPipe: function () {
     var pipe;
-    if (this.pipes.length < 7) {
+    if (this.pipes.length < 3) {
       pipe = new Pipe(this.game);
       this.pipes.add(pipe);
       this.scoreText.bringToTop();

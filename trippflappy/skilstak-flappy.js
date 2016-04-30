@@ -96711,7 +96711,7 @@ Flappy.Start.prototype = {
       if (this.sign.deltaY < 0) {
         this.sign.frame = 0;
       } else {
-        this.sign.frame = 1;
+        this.sign.frame = 2;
       }
     }
   }
@@ -96731,7 +96731,7 @@ Flappy.Play.prototype = {
     this.flappy = null;
     this.pipes = null;
     this.timer = null;
-    this.score = -1; 
+    this.score = +20; 
     this.scoreText = null;
   },
 
@@ -96757,7 +96757,7 @@ Flappy.Play.prototype = {
 
   addPipe: function () {
     var pipe;
-    if (this.pipes.length < 3) {
+    if (this.pipes.length < 7) {
       pipe = new Pipe(this.game);
       this.pipes.add(pipe);
       this.scoreText.bringToTop();
@@ -96765,7 +96765,7 @@ Flappy.Play.prototype = {
       pipe = this.pipes.getFirstExists(false);
       pipe.reset();
     }
-    this.score += 1;
+    this.score += 3;
     this.scoreText.text = this.score;
     if (this.score > 0) this.pointSound.play();
   },

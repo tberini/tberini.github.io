@@ -96708,8 +96708,8 @@ Flappy.Start.prototype = {
 
   update: function () {
     if (this.config.sign.twoframe) {
-      if (this.sign.deltaY < 20) {
-        this.sign.frame = 20;
+      if (this.sign.deltaY < 0) {
+        this.sign.frame = 0;
       } else {
         this.sign.frame = 2;
       }
@@ -96731,7 +96731,7 @@ Flappy.Play.prototype = {
     this.flappy = null;
     this.pipes = null;
     this.timer = null;
-    this.score = +20; 
+    this.score = +17; 
     this.scoreText = null;
   },
 

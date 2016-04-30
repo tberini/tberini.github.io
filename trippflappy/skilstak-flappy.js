@@ -96731,7 +96731,7 @@ Flappy.Play.prototype = {
     this.flappy = null;
     this.pipes = null;
     this.timer = null;
-    this.score = +17; 
+    this.score = -3; 
     this.scoreText = null;
   },
 
@@ -96816,7 +96816,7 @@ Flappy.End.prototype = {
     if (score > Flappy.highScore) {
       localStorage.setItem(this.config.highscore.key, score);
     }
-    if (score <= 17) {score = 0};
+    if (score <= 3) {score = 0};
     this.scoretext = this.game.add.text(this.game.world.centerX,
                                         this.game.world.centerY + 70,
                                         score,
